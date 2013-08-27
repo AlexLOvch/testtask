@@ -1,0 +1,12 @@
+
+<div class='left'>
+  <input name=query id='query'>
+  <input value='Отправить' type=button id='send'>
+</div>  
+
+<div class='right'>
+  <span id='queries_cnt'><%= Query.count_to_s %></span>
+  <div id='queries'>
+    <%= render partial: 'queries/query_list' %>
+  </div>
+</div>  

@@ -1,0 +1,4 @@
+<%  @queries.each do |query|  %>
+  <span class='date'> <%= locale_time(query.created_at) %>: </span>
+  <span class='query_text'> <%= query.data  %> </span> 
+<% end %> 

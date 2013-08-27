@@ -1,0 +1,21 @@
+$(document).ready(function() {
+ $('#send').prop("disabled", true).click(function() {
+  $.ajax({
+    type: "POST",
+    url: "/home",
+    data: { query: $('#query').prop('value') },
+    dataType: "json"
+  }).success(function( data ) {
+    $('#queries_cnt').html(data.count_str) 
+    $('#queries').prepend($("<span/>").addClass("query_text").text(data.query)); 
+    $('#queries').prepend($("<span/>").addClass("date").text(data.date+':')); 
+    $('#query').prop('value','').trigger('keyup');
+  });
+ });
+ 
+ $('#query').keyup(function() {
+  $('#send').prop('disabled',$(this).prop('value')=='')
+ });
+ 
+
+});
