@@ -1,5 +1,29 @@
 testtask
 ========
+1. It is necessary to generate a new project rails 3.2. Database - sqlite.
+2. Make the controller for the main page and the model, which stores a line of text.
+3. The main page is divided into two parts: on the left side are the text input field and
+button. On the right - the text "0 queries" and below - empty div height to 300 px wide and in
+the entire right side of the page.
+4. The left and right side of the page are the same in width, centered within them all.
+The elements to each other are not glued and made beautiful Indent.
+5. When you press the button on the left side is transmitted to the server text entered in
+input field (without reloading the page). Then, the input field is cleared.
+6. On the server creates a new instance of the model with the text.
+7. The response from the server comes to the creation of the model + text instance, that (in
+any format) div added to the right of the page. Just updated text
+top div «N queries", where N - number of requests on the button that is processed server
+up to this point (where they maintain or compute - to think independently). at
+This word "request" should properly be inclined depending on the number N. Naturally
+to calculate the number of requests is better not to use count on a table.
+8. div on the right side to which is added the creation of the next record it + text -
+It should not grow down (fixed height), and the scroll bar should appear
+side.
+To use styles SCSS. For the frontend - javascript (+ jquery or anything), or
+CoffeeScript. It is not necessary in any way to style buttons and blocks. Provide that the screen / window
+browser may be from 1024 pixels wide. It is possible to use any other
+technology, databases, frameworks - in addition.
+
 1. Необходимо сгенерировать новый проект rails 3.2. База данных — sqlite.
 2. Сделать контроллер для главной страницы и модель, которая хранит строку текста.
 3. Главную страницу разделить на две части: в левой части находятся поле ввода текста и 
